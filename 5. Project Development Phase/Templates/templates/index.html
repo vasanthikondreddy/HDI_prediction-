@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HDI Atlas &mdash; Human Development Index Predictor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="atlas-grid-overlay"></div>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <div class="brand">
+      <span class="brand-mark">&#9711;</span>
+      <span class="brand-text">HDI Atlas</span>
+    </div>
+    <div class="nav-links">
+      <a href="#predict">Predict</a>
+      <a href="#batch">Batch</a>
+      <a href="#history">History</a>
+      <a href="#about">About</a>
+    </div>
+    <button class="theme-toggle" id="themeToggle" title="Toggle dark / light mode" aria-label="Toggle theme">
+      <span id="themeIcon">&#9789;</span>
+    </button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">A Comprehensive Measure of Well&#8209;Being</p>
+    <h1 class="hero-title">Human Development<br>Index Predictor</h1>
+    <p class="hero-sub">
+      Enter a country's life expectancy, schooling and income indicators.
+      The model reads them the way a cartographer reads terrain &mdash;
+      and places the country on the development map: <strong>Low</strong>,
+      <strong>Medium</strong>, <strong>High</strong>, or <strong>Very High</strong>.
+    </p>
+  </div>
+  <div class="hero-compass" aria-hidden="true">
+    <svg viewBox="0 0 200 200" width="180" height="180">
+      <circle cx="100" cy="100" r="92" fill="none" stroke="var(--accent)" stroke-width="1.5" opacity="0.5"/>
+      <circle cx="100" cy="100" r="70" fill="none" stroke="var(--accent)" stroke-width="1" opacity="0.3"/>
+      <line x1="100" y1="8" x2="100" y2="28" stroke="var(--accent)" stroke-width="1.5"/>
+      <line x1="100" y1="172" x2="100" y2="192" stroke="var(--accent)" stroke-width="1.5"/>
+      <line x1="8" y1="100" x2="28" y2="100" stroke="var(--accent)" stroke-width="1.5"/>
+      <line x1="172" y1="100" x2="192" y2="100" stroke="var(--accent)" stroke-width="1.5"/>
+      <polygon points="100,35 108,100 100,165 92,100" fill="var(--accent)" opacity="0.85"/>
+      <circle cx="100" cy="100" r="6" fill="var(--bg)" stroke="var(--accent)" stroke-width="2"/>
+    </svg>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- ============ PREDICTION SECTION ============ -->
+  <section id="predict" class="panel-row">
+
+    <div class="card form-card">
+      <h2 class="card-title">Country Indicators</h2>
+      <p class="card-sub">All four fields are required.</p>
+
+      <form id="predictForm" novalidate>
+        <div class="field-group">
+          <label for="life_expectancy">Life Expectancy <span class="unit">(years)</span></label>
+          <input type="number" step="0.1" id="life_expectancy" name="Life Expectancy" placeholder="e.g. 72.5" required>
+          <span class="field-error" data-for="life_expectancy"></span>
+        </div>
+
+        <div class="field-group">
+          <label for="mean_schooling">Mean Years of Schooling <span class="unit">(years)</span></label>
+          <input type="number" step="0.1" id="mean_schooling" name="Mean Years of Schooling" placeholder="e.g. 8.2" required>
+          <span class="field-error" data-for="mean_schooling"></span>
+        </div>
+
+        <div class="field-group">
+          <label for="expected_schooling">Expected Years of Schooling <span class="unit">(years)</span></label>
+          <input type="number" step="0.1" id="expected_schooling" name="Expected Years of Schooling" placeholder="e.g. 13.1" required>
+          <span class="field-error" data-for="expected_schooling"></span>
+        </div>
+
+        <div class="field-group">
+          <label for="gni">GNI Per Capita <span class="unit">(USD, PPP)</span></label>
+          <input type="number" step="1" id="gni" name="GNI Per Capita" placeholder="e.g. 15000" required>
+          <span class="field-error" data-for="gni"></span>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary" id="predictBtn">
+            <span class="btn-label">Predict HDI Category</span>
+            <span class="spinner" id="btnSpinner" hidden></span>
+          </button>
+          <button type="reset" class="btn btn-ghost" id="resetBtn">Reset</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="card result-card" id="resultCard">
+      <h2 class="card-title">Prediction Result</h2>
+      <div class="result-empty" id="resultEmpty">
+        <p>Fill in the indicators and press <strong>Predict HDI Category</strong>
+        to see the result plotted on the development gauge.</p>
+      </div>
+
+      <div class="result-content" id="resultContent" hidden>
+        <div class="gauge-wrap">
+          <svg id="gaugeSvg" viewBox="0 0 220 130" width="220" height="130">
+            <path d="M 20 110 A 90 90 0 0 1 200 110" fill="none" stroke="var(--border)" stroke-width="14" stroke-linecap="round"/>
+            <path id="gaugeArc" d="M 20 110 A 90 90 0 0 1 200 110" fill="none" stroke="var(--accent)" stroke-width="14" stroke-linecap="round" stroke-dasharray="283" stroke-dashoffset="283"/>
+            <g id="gaugeNeedle" transform="rotate(0 110 110)">
+              <line x1="110" y1="110" x2="110" y2="35" stroke="var(--text)" stroke-width="3"/>
+              <circle cx="110" cy="110" r="7" fill="var(--text)"/>
+            </g>
+          </svg>
+        </div>
+        <p class="result-category" id="resultCategory">&mdash;</p>
+        <p class="result-confidence" id="resultConfidence"></p>
+        <p class="result-meaning" id="resultMeaning"></p>
+        <div class="suggestions" id="suggestions"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CHART SECTION ============ -->
+  <section class="card chart-card">
+    <h2 class="card-title">Prediction History Distribution</h2>
+    <p class="card-sub">Live chart of every category you've predicted this session.</p>
+    <div class="chart-wrap">
+      <svg id="distChart" viewBox="0 0 400 180" width="100%" height="180"></svg>
+    </div>
+  </section>
+
+  <!-- ============ BATCH SECTION ============ -->
+  <section id="batch" class="card batch-card">
+    <h2 class="card-title">Batch Prediction (CSV Upload)</h2>
+    <p class="card-sub">
+      Upload a CSV with columns: <code>Life Expectancy</code>, <code>Mean Years of Schooling</code>,
+      <code>Expected Years of Schooling</code>, <code>GNI Per Capita</code>.
+    </p>
+    <form id="batchForm">
+      <input type="file" id="csvFile" name="file" accept=".csv" required>
+      <button type="submit" class="btn btn-primary">Upload &amp; Predict</button>
+    </form>
+    <div id="batchResult" class="batch-result" hidden>
+      <p id="batchSummary"></p>
+      <div class="table-wrap">
+        <table id="batchTable"></table>
+      </div>
+      <a href="/download_batch" class="btn btn-ghost" id="downloadBatchBtn">Download Full Results (CSV)</a>
+    </div>
+  </section>
+
+  <!-- ============ HISTORY SECTION ============ -->
+  <section id="history" class="card history-card">
+    <h2 class="card-title">Prediction History</h2>
+    <p class="card-sub">Your last predictions this session (not saved after server restart).</p>
+    <div class="table-wrap">
+      <table id="historyTable">
+        <thead>
+          <tr>
+            <th>Time</th><th>Life Exp.</th><th>Mean School</th><th>Exp. School</th>
+            <th>GNI</th><th>Category</th><th>Confidence</th>
+          </tr>
+        </thead>
+        <tbody id="historyBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT SECTION ============ -->
+  <section id="about" class="card about-card">
+    <h2 class="card-title">About This Project</h2>
+    <p>
+      This tool predicts a country's <strong>Human Development Index (HDI) Category</strong>
+      &mdash; Low, Medium, High, or Very High &mdash; from four core indicators used by the
+      UNDP methodology: life expectancy at birth, mean years of schooling, expected years
+      of schooling, and Gross National Income (GNI) per capita. A machine learning model
+      was trained on historical development data, comparing several algorithms and
+      automatically selecting the strongest performer.
+    </p>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Built with Flask &amp; scikit-learn &middot; HDI Atlas &copy; <span id="year"></span></p>
+  <p class="footer-sub">Academic / educational project &mdash; not an official UNDP tool.</p>
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

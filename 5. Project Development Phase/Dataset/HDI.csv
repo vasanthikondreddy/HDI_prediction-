@@ -1,0 +1,154 @@
+Country,Life Expectancy,Mean Years of Schooling,Expected Years of Schooling,GNI Per Capita,HDI Score,HDI Category
+Madagascar,73.2,8.2,12.5,9236.32,0.68,Medium
+Togo,70.0,9.1,11.2,,0.655,Medium
+Guatemala,65.4,7.5,10.7,5706.57,0.596,Medium
+Saudi Arabia,65.6,4.5,9.5,1673.13,0.482,Low
+Estonia,72.4,8.2,11.1,6142.9,0.642,Medium
+Iran,63.8,9.6,12.9,4901.18,0.624,Medium
+Burundi,71.4,10.5,15.8,9228.56,0.728,High
+Central African Republic,70.2,8.6,8.8,7352.22,0.622,Medium
+Israel,73.7,7.9,12.7,34390.23,0.741,High
+Japan,74.5,10.8,15.2,27081.23,0.795,High
+Luxembourg,78.0,10.7,17.9,26290.46,0.834,Very High
+Canada,74.5,9.7,16.3,35172.73,0.805,Very High
+Finland,71.6,8.2,13.3,18278.18,0.714,High
+Thailand,65.4,6.5,12.9,11203.5,0.638,Medium
+South Africa,67.8,8.0,11.0,29675.4,0.689,Medium
+Yemen,64.3,6.9,14.5,20581.91,0.68,Medium
+Jordan,59.6,5.8,10.4,13072.02,0.581,Medium
+Cyprus,63.9,5.2,13.6,3621.74,0.567,Medium
+Uganda,70.1,9.9,15.5,21326.72,0.755,High
+Bolivia,63.1,6.1,8.7,5650.09,0.546,Low
+Burkina Faso,77.6,8.3,12.0,11176.58,0.704,High
+Georgia,64.8,8.8,11.2,7953.42,0.629,Medium
+Argentina,73.8,8.0,15.3,86514.11,0.809,Very High
+Senegal,68.4,7.4,13.2,8122.34,0.65,Medium
+Kenya,68.4,9.5,14.1,12463.95,0.703,High
+Chile,75.6,10.3,17.4,5524.4,0.729,High
+Portugal,66.8,7.6,14.8,8329.0,0.661,Medium
+Moldova,63.1,8.0,10.9,4980.27,0.587,Medium
+Slovakia,59.6,8.0,11.0,1927.54,0.521,Low
+Turkey,67.0,7.6,10.7,15680.66,0.65,Medium
+Iraq,58.0,5.5,9.5,1744.72,0.468,Low
+Lesotho,69.7,9.1,13.7,7326.29,0.675,Medium
+Haiti,66.5,9.2,14.6,10111.5,0.685,Medium
+Spain,72.1,9.0,15.2,15108.24,0.735,High
+Peru,69.3,10.5,13.7,9507.75,0.701,High
+Mozambique,65.6,4.7,10.4,2976.12,0.525,Low
+New Zealand,81.0,11.7,13.5,84437.55,0.871,Very High
+Latvia,62.3,4.6,8.4,2345.19,0.477,Low
+Belarus,,4.1,8.5,2065.22,0.461,Low
+Serbia,62.2,5.1,6.9,1219.47,0.431,Low
+Greece,76.2,9.2,14.5,51299.99,0.806,Very High
+Tanzania,70.3,9.6,12.3,3614.6,0.631,Medium
+Samoa,68.8,6.6,10.4,1677.76,0.528,Low
+North Macedonia,64.9,7.6,9.9,8280.23,0.604,Medium
+Australia,77.5,12.1,18.2,56782.24,0.887,Very High
+Croatia,69.9,10.8,17.0,6367.43,0.713,High
+Cuba,71.0,9.1,13.3,19591.66,0.725,High
+Comoros,70.2,9.0,12.2,4139.01,0.631,Medium
+Dominican Republic,70.5,8.5,13.2,5903.06,0.655,Medium
+South Korea,79.4,11.6,19.7,22097.87,0.857,Very High
+Tunisia,64.2,7.2,10.2,3726.41,0.56,Medium
+Belgium,73.7,9.9,15.7,20370.28,0.772,High
+Ghana,67.7,8.0,9.9,3899.84,0.584,Medium
+Honduras,69.8,10.2,15.4,20403.32,0.753,High
+Algeria,68.5,8.3,13.2,5625.39,0.642,Medium
+Pakistan,65.9,9.8,16.3,15302.94,0.723,High
+Ethiopia,65.6,7.8,9.8,11477.79,0.623,Medium
+Ecuador,58.8,8.1,9.3,1622.26,0.493,Low
+Lebanon,68.3,5.8,11.6,5672.18,0.596,Medium
+Slovenia,64.8,9.9,13.9,28111.16,0.725,High
+Norway,81.6,10.0,18.6,61105.07,0.891,Very High
+Colombia,74.7,9.8,17.7,14115.59,0.775,High
+Djibouti,56.2,2.1,7.3,1794.0,0.391,Low
+Poland,65.1,8.2,15.3,25605.19,0.716,High
+Romania,73.0,8.9,14.9,25009.75,0.759,High
+Papua New Guinea,57.0,3.7,8.6,2911.52,0.456,Low
+Czech Republic,72.4,7.9,14.0,22845.48,0.731,High
+Italy,74.0,12.6,16.0,18904.74,0.801,Very High
+Fiji,60.9,3.0,8.8,2040.26,0.447,Low
+Brazil,72.7,11.8,15.1,29952.04,0.801,Very High
+Botswana,59.3,4.6,11.3,5512.98,0.537,Low
+Uzbekistan,59.3,3.1,11.2,615.51,0.396,Low
+Vietnam,75.1,10.0,15.2,20377.49,0.775,High
+Gabon,64.6,4.3,9.0,9394.14,0.551,Medium
+Kuwait,65.4,6.7,12.4,6290.98,0.608,Medium
+Niger,74.4,10.3,14.1,19397.69,0.762,High
+Hungary,75.9,12.1,14.2,8870.7,0.749,High
+Zimbabwe,73.9,7.9,11.7,17248.71,0.7,High
+Mauritania,59.3,5.9,9.1,2043.2,0.482,Low
+Nigeria,70.8,10.6,16.0,12221.75,0.743,High
+Malawi,77.4,8.6,14.8,7171.76,0.711,High
+Liberia,64.0,7.4,9.7,13188.2,0.616,Medium
+India,61.9,8.6,12.7,2797.55,0.573,Medium
+Iceland,81.9,12.0,15.8,93544.46,0.907,Very High
+Honduras,69.8,10.2,15.4,20403.32,0.753,High
+Panama,68.6,6.2,11.7,14831.14,0.648,Medium
+Indonesia,69.5,10.4,12.4,7873.07,0.68,Medium
+Russia,74.7,8.4,14.1,61284.92,0.792,High
+Guinea,62.5,6.0,11.7,2194.58,0.525,Low
+Sierra Leone,74.2,10.5,16.6,13606.1,0.769,High
+Malaysia,73.6,8.9,17.4,37921.35,0.805,Very High
+Bahrain,63.2,6.3,10.5,1522.38,0.499,Low
+Netherlands,74.1,8.9,16.8,12375.76,0.748,High
+Sri Lanka,74.8,8.4,17.5,16581.48,0.767,High
+Sudan,65.5,8.2,11.4,9347.67,0.635,Medium
+Brunei,63.2,6.7,12.4,9630.31,0.618,Medium
+Azerbaijan,68.0,9.3,11.1,4716.13,0.622,Medium
+Congo (DRC),67.8,9.6,9.6,14444.65,0.664,Medium
+Malta,62.5,,8.4,1360.52,0.478,Low
+Singapore,65.2,6.6,11.1,3339.23,0.561,Medium
+Guinea-Bissau,76.0,8.8,13.9,45623.52,0.788,High
+Denmark,76.7,11.1,14.9,33508.91,0.816,Very High
+Liechtenstein,73.7,9.5,13.0,16530.18,0.731,High
+Armenia,66.0,7.3,13.6,15780.57,0.673,Medium
+Hong Kong,65.0,3.8,11.0,6619.56,0.556,Medium
+Germany,72.0,7.6,13.3,16369.25,0.703,High
+United States,75.3,13.5,18.2,19828.97,0.838,Very High
+Mexico,66.4,8.3,11.5,11043.03,0.649,Medium
+Chad,70.2,9.5,15.3,20260.55,0.746,High
+Lithuania,63.6,6.8,10.7,2195.6,0.529,Low
+Sweden,78.9,13.5,19.8,105391.08,0.952,Very High
+Qatar,71.7,7.4,10.0,6836.64,0.622,Medium
+Paraguay,64.2,5.5,9.7,,0.524,Low
+Ireland,74.3,9.2,14.4,76007.45,0.812,Very High
+Rwanda,66.9,8.7,11.6,8409.06,0.644,Medium
+Bangladesh,69.5,8.0,10.8,3620.98,0.596,Medium
+Uruguay,61.6,5.9,9.1,1791.11,0.484,Low
+Egypt,74.0,12.6,14.3,21779.3,0.794,High
+Oman,71.6,7.7,14.1,11634.43,0.694,Medium
+Ukraine,71.7,8.3,13.9,5349.51,0.66,Medium
+Namibia,65.6,3.1,7.4,3176.13,0.468,Low
+Zambia,68.1,9.6,13.3,6919.54,0.666,Medium
+United Kingdom,80.0,11.4,15.4,37579.01,0.846,Very High
+South Sudan,70.5,10.4,11.9,25641.55,0.736,High
+Myanmar,70.1,8.7,13.4,4034.54,0.637,Medium
+Angola,66.0,6.3,12.8,,0.63,Medium
+China,66.4,7.9,13.0,17211.58,0.68,Medium
+Mongolia,65.3,6.9,11.6,13513.88,0.637,Medium
+Nepal,72.8,8.3,12.5,11220.82,0.689,Medium
+Philippines,63.9,6.8,12.0,3131.73,0.563,Medium
+Gambia,65.4,6.9,11.2,4507.1,0.582,Medium
+Austria,81.9,10.7,18.5,12324.97,0.817,Very High
+Cambodia,74.8,8.6,11.8,13352.81,0.702,High
+Eswatini,57.3,1.6,6.9,2555.37,0.396,Low
+Bosnia and Herzegovina,59.3,6.1,12.3,3144.27,0.538,Low
+Bulgaria,68.2,8.0,11.4,11319.48,0.654,Medium
+Tonga,62.2,5.3,8.4,3313.16,0.503,Low
+Switzerland,75.8,10.4,18.0,61745.38,0.861,Very High
+Morocco,68.3,6.8,12.4,12543.94,0.655,Medium
+Albania,63.8,7.2,10.3,6607.85,0.588,Medium
+Jamaica,65.0,3.4,13.2,18615.44,0.619,Medium
+Nicaragua,64.0,5.6,10.8,12554.11,0.602,Medium
+United Arab Emirates,,3.9,9.8,3579.95,0.504,Low
+Benin,71.2,7.2,13.0,7126.14,0.651,Medium
+Mali,66.9,8.5,12.2,11349.78,0.662,Medium
+Kazakhstan,62.1,6.6,5.9,6964.43,0.524,Low
+Burkina Faso,77.6,8.3,12.0,11176.58,0.704,High
+France,73.7,9.4,17.6,14355.52,0.766,High
+Afghanistan,66.5,8.1,14.0,9633.21,0.665,Medium
+Costa Rica,71.2,6.7,14.1,25441.8,0.716,High
+United Kingdom,80.0,11.4,15.4,37579.01,0.846,Very High
+Cameroon,67.2,6.9,11.1,8049.7,0.617,Medium
+Venezuela,63.6,4.0,9.2,3360.14,0.5,Low
