@@ -1,14 +1,3 @@
-"""
-app.py
-------
-Flask web application for predicting a country's Human Development Index
-(HDI) Category from four socio-economic indicators.
-
-Run with:
-    python app.py
-
-Then open http://127.0.0.1:5000 in your browser.
-"""
 
 import io
 import os
@@ -32,10 +21,13 @@ from flask import (
 app = Flask(__name__)
 app.secret_key = "hdi-prediction-secret-key-change-in-production"
 
-MODEL_PATH = "model.pkl"
-SCALER_PATH = "scaler.pkl"
-ENCODER_PATH = "label_encoder.pkl"
 
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+MODEL_PATH = os.path.join(BASE_DIR, "model.pkl")
+SCALER_PATH = os.path.join(BASE_DIR, "scaler.pkl")
+ENCODER_PATH = os.path.join(BASE_DIR, "label_encoder.pkl")
 FEATURE_COLUMNS = [
     "Life Expectancy",
     "Mean Years of Schooling",
