@@ -209,7 +209,7 @@ git push -u origin main
 ```
 **Render**
 **Live link**:https://hdi-prediction-zrrq.onrender.com
-**Live Demo link**:https://drive.google.com/file/d/1ZztP_s05NAoIX3CGT1ZKAIC9QVYDepT3/view?usp=sharing
+**Live Demo link**:https://drive.google.com/file/d/1pp0qA6tB9S6HgYO7TNooETmgl7XXbXhA/view?usp=drive_link
 ## Contributors
 
 ### Vasanthi Kondreddy (Team Lead)
