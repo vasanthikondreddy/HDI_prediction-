@@ -8,8 +8,6 @@ development indicators, wrapped in a Flask web application.
 
 ---
 
----
-
 ## Project Description
 
 The **Human Development Index (HDI)** is a UNDP metric summarizing a
