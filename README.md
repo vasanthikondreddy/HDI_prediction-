@@ -209,7 +209,9 @@ git branch -M main
 git remote add origin https://github.com/vasanthikondreddy/HDI_prediction-.git      
 git push -u origin main                 
 ```
-
+**Render**
+**Live link**:https://hdi-prediction-zrrq.onrender.com
+**Live Demo link**:https://drive.google.com/file/d/1ZztP_s05NAoIX3CGT1ZKAIC9QVYDepT3/view?usp=sharing
 ## Contributors
 
 ### Vasanthi Kondreddy (Team Lead)
