@@ -84,7 +84,7 @@ name (e.g. `Category`) and everything keeps working.
 ### 1. Clone / download the project
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/vasanthikondreddy/HDI_prediction-.git
 cd hdi_project
 ```
 
@@ -206,7 +206,7 @@ git init
 git add .                               
 git commit -m "Initial commit"          
 git branch -M main                      
-git remote add origin <repo-url>        
+git remote add origin https://github.com/vasanthikondreddy/HDI_prediction-.git      
 git push -u origin main                 
 ```
 
